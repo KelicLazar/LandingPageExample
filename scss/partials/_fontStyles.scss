@@ -81,7 +81,7 @@ h4 {
   font-weight: 700;
   line-height: 113%; /* 113.636% */
   letter-spacing: 0.88px;
-  @include responsive-font-size(44px, 36px, 20px);
+  @include responsive-font-size(44px, 36px, 22px);
 }
 
 h5 {
