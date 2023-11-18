@@ -1,0 +1,76 @@
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@-webkit-keyframes arrowIn {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-200%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    opacity: 1;
+    @include transform(scale(1) rotate(360deg));
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+@keyframes arrowIn {
+  0% {
+    opacity: 0;
+    @include transform(translateX(-200%));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateX(0));
+  }
+}
+@keyframes spin {
+  100% {
+    opacity: 1;
+    @include transform(scale(1) rotate(360deg));
+  }
+}
+
+.toAnimate {
+  opacity: 0;
+  @include transform(translateY(150px));
+}
+
+.entered {
+  opacity: 1;
+  @include transition(all 0.5s ease 0.3s);
+
+  @include transform(translateY(0));
+}
+
+.arrowIn {
+  opacity: 0;
+  @include animation(arrowIn 0.3s ease-out 0.5s 1 forwards);
+}
+
+.spin {
+  opacity: 0;
+  @include transform(scale(0.2));
+  @include animation(spin 1s ease 0.4s 1 forwards);
+}

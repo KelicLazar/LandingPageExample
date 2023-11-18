@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "Aspergit";
+  src: url("../fonts/Aspergit.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aspergit";
+  src: url("../fonts/Aspergit\ Bold.otf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/FuturaPTLight.otf");
+  font-weight: 300;
+}
+
+body {
+  background-color: $color-purple;
+  color: $color-white;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+*::selection {
+  background-color: $color-lime;
+  color: $color-purple;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+h1 {
+  font-family: "Aspergit";
+
+  font-size: 113px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 132.21px */
+  text-transform: uppercase;
+  @include responsive-font-size(113px, 80px, 30px);
+}
+
+h2 {
+  font-family: "Aspergit";
+  font-size: 94px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 117%; /* 109.98px */
+  letter-spacing: -2.83px;
+  text-transform: uppercase;
+  @include responsive-font-size(94px, 60px, 30px);
+
+  @include media-max-width(768px) {
+    letter-spacing: 2px;
+  }
+}
+h3 {
+  font-family: "Aspergit";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142%;
+  @include responsive-font-size(54px, 40px, 22px);
+}
+
+h4 {
+  font-family: "Aspergit";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 113%; /* 113.636% */
+  letter-spacing: 0.88px;
+  @include responsive-font-size(44px, 36px, 20px);
+}
+
+h5 {
+  font-family: "Aspergit";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 100% */
+  letter-spacing: -0.6px;
+  @include responsive-font-size(30px, 30px, 20px);
+}
+
+p,
+a {
+  font-family: "Futura PT";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 110%; /* 110% */
+  letter-spacing: -1.2px;
+  @include responsive-font-size(30px, 25px, 20px);
+}
+
+p.small,
+span.small,
+a.small {
+  font-family: "Futura PT";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 114%; /* 114.286% */
+  letter-spacing: -1.12px;
+  @include responsive-font-size(28px, 23px, 16px);
+}
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+.cta {
+  color: $color-purple;
+  text-align: center;
+  font-family: "Aspergit";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 111%; /* 19.98px */
+  letter-spacing: -0.54px;
+  text-transform: uppercase;
+}
+.highlight-text {
+  color: $color-lime;
+  @include transition(all 0.2s ease);
+  cursor: default;
+
+  &:hover {
+    background-color: #d5ff2f;
+    color: $color-purple;
+  }
+}
+
+.small-group {
+  @include media-max-width(768px) {
+    width: 40px;
+  }
+}
+.big-group {
+  @include media-max-width(1200px) {
+    width: 100px;
+  }
+  @include media-max-width(768px) {
+    width: 60px;
+  }
+}
+
+.arrows {
+  @include responsive-svg-width(70px, 55px, 45px);
+}

@@ -1,0 +1,30 @@
+section.join-network {
+  margin-top: 300px;
+  padding-top: 50px;
+  position: relative;
+  .join-network__svg--arrows {
+    position: absolute;
+    left: 70%;
+    top: 0;
+  }
+  .join-network__container {
+    width: 70%;
+    margin: auto;
+
+    h2 {
+      margin-bottom: 60px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include media-max-width(768px) {
+    margin-top: 100px;
+    .join-network__container {
+      width: 90%;
+      margin: 2rem auto;
+    }
+  }
+}

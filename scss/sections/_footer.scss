@@ -1,0 +1,117 @@
+footer {
+  position: relative;
+  .footer__container {
+    width: 40%;
+    margin-left: 15%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 120px;
+
+    .footer__navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      gap: 1rem;
+
+      a {
+        font-family: Futura PT;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 32px; /* 114.286% */
+        letter-spacing: -1.12px;
+        color: $color-white;
+        text-decoration: none;
+
+        // &:nth-of-type(2) {
+        //   margin: 16px 0;
+        // }
+        &:hover {
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &::after {
+          @include transition(all 0.2s ease);
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background-color: $color-lime;
+        }
+      }
+    }
+    .footer__socials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+
+      a {
+        img {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    @include media-max-width(1200px) {
+      width: 80%;
+      margin-left: 10%;
+    }
+    @include media-max-width(768px) {
+      flex-direction: column;
+      width: 100%;
+      margin: 150px 0 2rem;
+      gap: 2rem;
+      img {
+        width: 50%;
+        margin: 1rem auto;
+      }
+      .footer__navigation {
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+      }
+      .footer__socials {
+        grid-template-columns: repeat(6, 1fr);
+        margin: auto;
+      }
+    }
+  }
+  .copyrights {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .footer__svg--black-group {
+    position: absolute;
+    bottom: 0;
+    right: 15%;
+    z-index: -2;
+  }
+  @include media-max-width(1200px) {
+    .footer__svg--black-group {
+      width: 200px;
+    }
+  }
+  @include media-max-width(768px) {
+    overflow: hidden;
+    .footer__container {
+      margin-bottom: 4rem;
+    }
+    .copyrights {
+      font-size: 20px;
+    }
+
+    .footer__svg--black-group {
+      width: 150px;
+      right: 0;
+      z-index: -2;
+    }
+  }
+}

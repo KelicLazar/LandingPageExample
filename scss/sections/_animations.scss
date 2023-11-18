@@ -1,0 +1,24 @@
+section.animation {
+  position: relative;
+  padding: 12rem 0;
+
+  @include media-max-width(768px) {
+    padding: 6rem 0;
+  }
+  .animation__container {
+    width: 70%;
+    margin: auto;
+    @include media-max-width(768px) {
+      width: 85%;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 10/6;
+    }
+  }
+  .animation__blue--group {
+    position: absolute;
+    right: 0;
+  }
+}

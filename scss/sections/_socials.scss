@@ -1,0 +1,55 @@
+.socials {
+  position: absolute;
+  height: 95%;
+  right: 36px;
+  //padding-top: 260px;
+  opacity: 0;
+  @include animation(animate 0.5s ease-in 0.4s 1 forwards);
+  z-index: 1;
+  @include transition(all 0.2s ease);
+
+  .socials__wrapper {
+    position: sticky;
+    // top: 150px;
+    // position: fixed;
+    // right: 36px;
+    top: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    z-index: 1;
+    // box-shadow: 5px 5px 5px $color-purple;
+    background-color: #361281;
+
+    a img {
+      @include transition(all 0.3s ease);
+    }
+    a:hover img {
+      background-color: #361281;
+      @include transform(scale(2) translateX(-5px) translateY(-2px));
+    }
+  }
+
+  @include media-max-width(768px) {
+    right: 5px;
+    .socials__wrapper {
+      gap: 0.5rem;
+      @include transition(all 0.2s ease);
+      width: 100%;
+      top: 100px;
+      margin: auto;
+    }
+
+    &:hover {
+      right: 1rem;
+      .socials__wrapper {
+        gap: 1rem;
+      }
+    }
+
+    a img {
+      width: 20px;
+    }
+  }
+}

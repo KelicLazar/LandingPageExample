@@ -1,0 +1,129 @@
+section.news {
+  position: relative;
+  padding: 200px 0 0;
+
+  .news__svg--blue-group-big-left {
+    position: absolute;
+    top: 0;
+  }
+  .news__svg--arrows {
+    position: absolute;
+    left: 55%;
+    top: 10%;
+    opacity: 0;
+    @include animation(arrowIn 0.3s ease-out 1.4s 1 forwards);
+    @include media-max-width(768px) {
+      top: 0;
+    }
+  }
+
+  .news__svg--gear8 {
+    position: absolute;
+    @include transform(translate(120%, 100%));
+    bottom: 0;
+    left: 0;
+    @include media-max-width(1200px) {
+      @include transform(translate(0, 150%));
+      width: 70px;
+    }
+  }
+  .news__svg--arrows--bottom {
+    position: absolute;
+    bottom: -70px;
+    right: 22%;
+    @include transform(translate(-50%));
+  }
+
+  .news__container {
+    width: 70%;
+    margin: auto;
+
+    h2 {
+      letter-spacing: -2.82px;
+      margin-bottom: 3rem;
+    }
+    .news__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 0;
+      list-style: none;
+      gap: 90px;
+      margin-bottom: 0;
+
+      img {
+        margin-bottom: 20px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      span.small {
+        display: block;
+        margin-bottom: 10px;
+      }
+      h4 {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      span.small,
+      p.small {
+        font-family: Futura PT;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 114%; /* 114.286% */
+        letter-spacing: -1.12px;
+      }
+      a {
+        color: $color-lime;
+        text-decoration: none;
+      }
+      li {
+        margin-bottom: 40px;
+      }
+
+      @include media-max-width(768px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        p {
+          text-align: justify;
+        }
+      }
+    }
+
+    svg {
+      position: relative;
+      // height: 50px;
+    }
+
+    text {
+      @include transform(translate(50%, calc(50% + 2px)));
+      fill: #361281;
+
+      font-family: "Aspergit";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+  @include media-max-width(768px) {
+    padding-top: 100px;
+    width: 100%;
+    margin: auto;
+    .news__container {
+      width: 80%;
+      h2 {
+        letter-spacing: 2px;
+        text-align: center;
+      }
+
+      svg {
+        width: 150px;
+      }
+    }
+  }
+}

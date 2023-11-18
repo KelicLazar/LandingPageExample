@@ -1,0 +1,49 @@
+@mixin media-max-width($max-width) {
+  @media only screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin responsive-font-size($large, $medium, $small) {
+  font-size: $large;
+
+  @include media-max-width(1200px) {
+    font-size: $medium; // Font size for medium screens
+  }
+
+  @include media-max-width(768px) {
+    font-size: $small; // Font size for large screens
+  }
+}
+
+@mixin responsive-svg-width($large, $medium, $small) {
+  width: $large !important;
+
+  @include media-max-width(1200px) {
+    width: $medium !important; // Font size for medium screens
+  }
+
+  @include media-max-width(768px) {
+    width: $small !important; // Font size for large screens
+  }
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  animation: $animation;
+}
