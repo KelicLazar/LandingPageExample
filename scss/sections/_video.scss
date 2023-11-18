@@ -24,7 +24,6 @@ section.video {
   }
   .video__svg--gear7 {
     position: absolute;
-
     bottom: 0;
     right: 0;
     @include transform(translate(-120%, 50%));
@@ -53,7 +52,6 @@ section.video {
       position: relative;
       width: 100%;
       .video__player {
-        // width: 100%;
         object-fit: cover;
         width: 100%;
         object-position: top;

@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  //   background-color: red;
 
   .hero__svg--top {
     margin: auto;
@@ -14,7 +13,6 @@
 
   .hero__wrapper {
     width: 80%;
-    // max-width: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -88,18 +86,16 @@
       opacity: 0;
       @include transform(translateY(60%));
       @include animation(animate 0.3s ease-in 1.1s 1 forwards);
-      // opacity: 1;
+
       top: 50px;
       @include responsive-svg-width(75px, 50px, 45px);
     }
     .hero__gear6 {
-      // position: absolute;
       position: absolute;
       left: -70%;
       opacity: 0;
       @include transform(scale(0.2));
       @include animation(spin 1s ease 0.4s 1 forwards);
-      // left: -424px;
     }
     .hero__arrows {
       opacity: 0;
@@ -142,10 +138,6 @@
       }
       .hero__gear1 {
         top: 15px;
-      }
-
-      .hero__arrows {
-        // @include responsive-svg-width(116px, 80px, 60px);
       }
     }
   }

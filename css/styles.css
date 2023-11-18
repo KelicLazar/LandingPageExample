@@ -734,7 +734,6 @@ section.why-us {
       section.why-us ul {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        row-gap: 3rem;
         width: 80%;
         margin: auto;
         row-gap: 2.5rem; }
@@ -1096,7 +1095,6 @@ section.news {
         font-style: normal;
         font-weight: 300;
         line-height: 114%;
-        /* 114.286% */
         letter-spacing: -1.12px; }
       section.news .news__container .news__list a {
         color: #d5ff2f;
@@ -1161,7 +1159,6 @@ footer {
         font-style: normal;
         font-weight: 300;
         line-height: 32px;
-        /* 114.286% */
         letter-spacing: -1.12px;
         color: #fff;
         text-decoration: none; }
